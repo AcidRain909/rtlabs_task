@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="rtlabs_db@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="rtlabs_db">
+      <ObjectId>58755</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12292</ObjectId>
+    </database>
+    <database id="4" parent="1" name="mobile_phones">
+      <ObjectId>16420</ObjectId>
+    </database>
+    <database id="5" parent="1" name="university">
+      <ObjectId>16482</ObjectId>
+    </database>
+    <database id="6" parent="1" name="saturn_db">
+      <ObjectId>24898</ObjectId>
+    </database>
+    <database id="7" parent="1" name="mobile_hibernate">
+      <ObjectId>25045</ObjectId>
+    </database>
+    <database id="8" parent="1" name="transact">
+      <ObjectId>25138</ObjectId>
+    </database>
+    <database id="9" parent="1" name="saturn_hibernate666">
+      <ObjectId>25287</ObjectId>
+    </database>
+    <role id="10" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="16" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-08-09.15:02:57.865</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2086</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="17" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="20" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="21" parent="2" name="information_schema">
+      <ObjectId>12002</ObjectId>
+    </schema>
+    <sequence id="22" parent="16" name="application_id_seq">
+      <ObjectId>58824</ObjectId>
+      <StateNumber>2079</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="23" parent="16" name="declarer_id_seq">
+      <ObjectId>58809</ObjectId>
+      <StateNumber>2058</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="24" parent="16" name="department_id_seq">
+      <ObjectId>58771</ObjectId>
+      <StateNumber>2038</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="25" parent="16" name="service_id_seq">
+      <ObjectId>58787</ObjectId>
+      <StateNumber>2046</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="26" parent="16" name="application">
+      <ObjectId>58765</ObjectId>
+      <StateNumber>2086</StateNumber>
+    </table>
+    <table id="27" parent="16" name="declarer">
+      <ObjectId>58762</ObjectId>
+      <StateNumber>2086</StateNumber>
+    </table>
+    <table id="28" parent="16" name="department">
+      <ObjectId>58756</ObjectId>
+      <StateNumber>2050</StateNumber>
+    </table>
+    <table id="29" parent="16" name="service">
+      <ObjectId>58759</ObjectId>
+      <StateNumber>2085</StateNumber>
+    </table>
+    <column id="30" parent="26" name="service_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2084</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="31" parent="26" name="declarer_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2077</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="26" name="created">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2078</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="33" parent="26" name="id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2079</StateNumber>
+      <DefaultExpression>nextval(&apos;application_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>application_id_seq</SequenceName>
+    </column>
+    <index id="34" parent="26" name="application_id_pk">
+      <ObjectId>58833</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="26" name="application_id_pk">
+      <ObjectId>58834</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>application_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="36" parent="26" name="application_service_id_fk">
+      <ObjectId>58840</ObjectId>
+      <ColNames>service_id</ColNames>
+      <RefTableId>58759</RefTableId>
+      <RefColPositions>3</RefColPositions>
+      <RefTableName>service</RefTableName>
+      <RefKeyName>service_id_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="37" parent="26" name="application_declarer_id_fk">
+      <ObjectId>58845</ObjectId>
+      <ColNames>declarer_id</ColNames>
+      <RefTableId>58762</RefTableId>
+      <RefColPositions>7</RefColPositions>
+      <RefTableName>declarer</RefTableName>
+      <RefKeyName>declarer_id_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="38" parent="27" name="last_name">
+      <Position>1</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2051</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="39" parent="27" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2052</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="27" name="patronymic">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>2053</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="27" name="phone">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2054</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="27" name="birth_date">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2055</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="43" parent="27" name="email">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>2056</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="27" name="id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2058</StateNumber>
+      <DefaultExpression>nextval(&apos;declarer_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>declarer_id_seq</SequenceName>
+    </column>
+    <index id="45" parent="27" name="declarer_email_uindex">
+      <ObjectId>58808</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="46" parent="27" name="declarer_id_pk">
+      <ObjectId>58819</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="27" name="declarer_id_pk">
+      <ObjectId>58820</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>declarer_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="48" parent="28" name="department">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2071</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="28" name="id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2038</StateNumber>
+      <DefaultExpression>nextval(&apos;department_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>department_id_seq</SequenceName>
+    </column>
+    <column id="50" parent="28" name="code">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2049</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="51" parent="28" name="department_department_name_uindex">
+      <ObjectId>58799</ObjectId>
+      <ColNames>department</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="52" parent="28" name="department_id_pk">
+      <ObjectId>58780</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="53" parent="28" name="department_department_code_uindex">
+      <ObjectId>58782</ObjectId>
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="28" name="department_id_pk">
+      <ObjectId>58781</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>department_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="29" name="department_code">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2043</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="56" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2070</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="57" parent="29" name="id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2046</StateNumber>
+      <DefaultExpression>nextval(&apos;service_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>service_id_seq</SequenceName>
+    </column>
+    <index id="58" parent="29" name="service_service_name_uindex">
+      <ObjectId>58786</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="59" parent="29" name="service_id_pk">
+      <ObjectId>58797</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="29" name="service_id_pk">
+      <ObjectId>58798</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>service_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="61" parent="29" name="service_department_code_fk">
+      <ObjectId>58800</ObjectId>
+      <ColNames>department_code</ColNames>
+      <RefTableId>58756</RefTableId>
+      <RefColPositions>3</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
