@@ -4,8 +4,12 @@
 
 <div>
     <c:choose>
-        <c:when test="${paramsChecking.equals('success')}"><div class='msg success'>Ваша заявка успешно отправлена!</div></c:when>
-        <c:otherwise><div class='msg error'> <c:out value="${paramsChecking}" escapeXml="false"/></div></c:otherwise>
+        <c:when test="${paramsChecking.equals('success')}">
+            <div class='msg success'>Ваша заявка успешно отправлена!</div>
+        </c:when>
+        <c:otherwise>
+            <div class='msg error'><c:out value="${paramsChecking}" escapeXml="false"/></div>
+        </c:otherwise>
     </c:choose>
     <h1>Создание заявки</h1>
     <form id="registration" action="declare" method="post">
@@ -41,19 +45,22 @@
             <input type="date" value="${userBirthDate}" name="userBirthDate" style="margin-top: 10px;">
         </div>
 
-        <label>Выберите департамент обраащения</label>
-        <div class="styledsel">
-            <select>
-                <option value="1">Департамент 1</option>
-                <option value="1">Департамент 2</option>
+        <label>Выберите департамент обращения</label>
+
+        <div>
+            <select id="departmentSelect">
+                <c:forEach var="departmentArrayList" items="${departmentArrayList}">
+                    <option value="${departmentArrayList.code}">${departmentArrayList.name}</option>
+                </c:forEach>
             </select>
         </div>
 
         <label>Выберите услугу</label>
-        <div class="styledsel">
-            <select>
-                <option value="1">Услуга 1</option>
-                <option value="1">Услуга 2</option>
+        <div>
+            <select id="serviceSelect">
+                <c:forEach var="serviceArrayList" items="${serviceArrayList}">
+                    <option value="${serviceArrayList.departmentCode}">${serviceArrayList.name}</option>
+                </c:forEach>
             </select>
         </div>
 

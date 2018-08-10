@@ -25,7 +25,7 @@ public class DeclareServiceImpl implements DeclareService {
 
 
     @Override
-    public String declare(String userLastName, String userFirstName, String userPatronymic, String userPhone, String userEmail, Date userAge) {
+    public String declare(String userLastName, String userFirstName, String userPatronymic, String userPhone, String userEmail, Date userAge, String departmentName, String serviceName) {
         String paramsChecking = "";
 
         if (!formsCheck.checkName(userLastName))

@@ -15,7 +15,7 @@ public class FormsCheckImpl implements FormsCheck {
 
     @Override
     public boolean checkEngRusLettersDigitsDashTrait(String param) {
-        String regex = "[–∞-—è–ê-–Øa-zA-Z0-9-_\\s]+";
+        String regex = "[‡-ˇ¿-ﬂa-zA-Z0-9-_\\s]+";
         if (param.matches(regex)) {
             return true;
         }
@@ -32,7 +32,7 @@ public class FormsCheckImpl implements FormsCheck {
 
     @Override
     public boolean checkName(String param) {
-        String regex = "[–∞-—è–ê-–Øa-zA-Z\\s]+";
+        String regex = "[‡-ˇ¿-ﬂa-zA-Z\\s]+";
         if (param.matches(regex)) {
             return true;
         }
@@ -41,7 +41,7 @@ public class FormsCheckImpl implements FormsCheck {
 
     @Override
     public boolean checkCity(String param) {
-        String regex = "[–∞-—è–ê-–Øa-zA-Z0-9-_,./\\s]+";
+        String regex = "[‡-ˇ¿-ﬂa-zA-Z0-9-_,./\\s]+";
         if (param.matches(regex)) {
             return true;
         }
@@ -50,7 +50,7 @@ public class FormsCheckImpl implements FormsCheck {
 
     @Override
     public boolean checkAdress(String param) {
-        String regex = "[–∞-—è–ê-–Øa-zA-Z0-9-_,./\\s]+";
+        String regex = "[‡-ˇ¿-ﬂa-zA-Z0-9-_,./\\s]+";
         if (param.matches(regex)) {
             return true;
         }

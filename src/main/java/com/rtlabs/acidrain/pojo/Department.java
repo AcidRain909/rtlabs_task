@@ -5,6 +5,11 @@ public class Department {
     private String name;
     private int code;
 
+    public Department(String name, int code) {
+        this.name = name;
+        this.code = code;
+    }
+
     public Department(int id, String name, int code) {
         this.id = id;
         this.name = name;

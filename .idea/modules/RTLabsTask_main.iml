@@ -30,6 +30,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-web:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-config:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:42.1.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-web:4.3.17.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-acl:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-core:4.2.6.RELEASE" level="project" />

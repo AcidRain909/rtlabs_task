@@ -6,7 +6,6 @@ import com.rtlabs.acidrain.pojo.Declarer;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -19,7 +18,7 @@ public class DeclarerDaoImpl implements DeclarerDao {
         try (Connection connection = connectionManager.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "INSERT INTO declarer (last_name, first_name, patronymic, phone, email, birth_date) " +
-                             "VALUES (?, ?, ?, ?, ?, ?);")){
+                             "VALUES (?, ?, ?, ?, ?, ?);")) {
             preparedStatement.setString(1, declarer.getLastName());
             preparedStatement.setString(2, declarer.getFirstName());
             preparedStatement.setString(3, declarer.getPatronymic());
@@ -33,3 +32,5 @@ public class DeclarerDaoImpl implements DeclarerDao {
         }
     }
 }
+
+

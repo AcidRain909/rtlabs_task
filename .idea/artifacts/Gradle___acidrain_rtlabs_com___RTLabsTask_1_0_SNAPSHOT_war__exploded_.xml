@@ -23,6 +23,7 @@
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-web:4.2.6.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-config:4.2.6.RELEASE" />
           <element id="library" level="project" name="Gradle: org.postgresql:postgresql:42.1.4" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.0" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.3.17.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-acl:4.2.6.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-core:4.2.6.RELEASE" />

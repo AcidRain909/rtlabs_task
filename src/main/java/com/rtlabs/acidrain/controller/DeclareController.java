@@ -1,11 +1,16 @@
 package com.rtlabs.acidrain.controller;
 
+import com.google.gson.Gson;
 import com.rtlabs.acidrain.service.DeclareService;
+import com.rtlabs.acidrain.service.DepartmentService;
+import com.rtlabs.acidrain.service.ServiceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,22 +24,28 @@ public class DeclareController {
     static String userPhone = "";
     static String userEmail = "";
     static Date userAge = new Date();
+    static String departmentName = "";
+    static String serviceName = "";
 
     static String paramsChecking = "";
 
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd MM YYYY");
-
+    @Autowired
     private final DeclareService declareService;
+    private final DepartmentService departmentService;
+    private final ServiceService serviceService;
 
-    public DeclareController(DeclareService declareService) {
+    public DeclareController(DeclareService declareService, DepartmentService departmentService, ServiceService serviceService) {
         this.declareService = declareService;
+        this.departmentService = departmentService;
+        this.serviceService = serviceService;
     }
 
 
     @RequestMapping("/declare")
     public String getDeclarePage(Model model) {
        returnParamsToModel(model);
-        return "declare";
+       getDepartmentsAndServicesInfo(model);
+       return "declare";
     }
 
     @RequestMapping(value = "/declare", method = RequestMethod.POST)
@@ -44,6 +55,8 @@ public class DeclareController {
                                    @RequestParam(value = "userEmail") String userEmailPost,
                                    @RequestParam(value = "userPhone", required = true) String userPhonePost,
                                    @RequestParam(value = "userBirthDate", required = true) String userBirthDatePost,
+                                   @RequestParam(value = "departmentName", required = true) String departmentNamePost,
+                                   @RequestParam(value = "serviceName", required = true) String serviceNamePost,
                                    Model model) {
 
         userLastName = userLastNamePost;
@@ -51,16 +64,20 @@ public class DeclareController {
         userPatronymic = userPatronymicPost;
         userEmail = userEmailPost;
         userPhone = userPhonePost;
+        departmentName = departmentNamePost;
+        serviceName = serviceNamePost;
 
         try {
             SimpleDateFormat format = new SimpleDateFormat();
             format.applyPattern("yyyy-MM-dd");
             userAge = format.parse(userBirthDatePost);
-        } catch (ParseException e) { }
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+        }
 
         paramsChecking = declareService.declare(
                 userLastName, userFirstName, userPatronymic,
-                userPhone, userEmail, userAge);
+                userPhone, userEmail, userAge, departmentName, serviceName);
 
         if (paramsChecking.equals("")) {
             model.addAttribute("paramsChecking", "success");
@@ -79,5 +96,16 @@ public class DeclareController {
         model.addAttribute("userEmail", userEmail);
         model.addAttribute("userBirthDate", userAge);
         model.addAttribute("paramsChecking", paramsChecking);
+    }
+
+    public void getDepartmentsAndServicesInfo(Model model){
+        model.addAttribute("departmentArrayList", departmentService.getAllDepartments());
+        model.addAttribute("serviceArrayList", serviceService.getServicesByCode(departmentService.getAllDepartments().get(0).getCode()));
+    }
+
+    @RequestMapping(value = "/serviceListAjax/", method = RequestMethod.POST)
+    public @ResponseBody String getServicesListAjax(@RequestParam("departmentCode") String departmentCode) {
+        String servicesJson = new Gson().toJson(serviceService.getServicesByCode(Integer.parseInt(departmentCode)));
+        return servicesJson;
     }
 }

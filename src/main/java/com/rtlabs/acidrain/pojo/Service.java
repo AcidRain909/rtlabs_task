@@ -5,6 +5,11 @@ public class Service {
     private String name;
     private int departmentCode;
 
+    public Service(String name, int departmentCode) {
+        this.name = name;
+        this.departmentCode = departmentCode;
+    }
+
     public Service(int id, String name, int departmentCode) {
         this.id = id;
         this.name = name;
