@@ -24,8 +24,8 @@ public class DeclareController {
     static String userPhone = "";
     static String userEmail = "";
     static Date userAge = new Date();
-    static String departmentName = "";
-    static String serviceName = "";
+    static String departmentCode = "";
+    static String serviceId = "";
 
     static String paramsChecking = "";
 
@@ -55,8 +55,8 @@ public class DeclareController {
                                    @RequestParam(value = "userEmail") String userEmailPost,
                                    @RequestParam(value = "userPhone", required = true) String userPhonePost,
                                    @RequestParam(value = "userBirthDate", required = true) String userBirthDatePost,
-                                   @RequestParam(value = "departmentName", required = true) String departmentNamePost,
-                                   @RequestParam(value = "serviceName", required = true) String serviceNamePost,
+                                   @RequestParam(value = "departmentCode", required = true) String departmentCodePost,
+                                   @RequestParam(value = "serviceId", required = true) String serviceIdPost,
                                    Model model) {
 
         userLastName = userLastNamePost;
@@ -64,8 +64,8 @@ public class DeclareController {
         userPatronymic = userPatronymicPost;
         userEmail = userEmailPost;
         userPhone = userPhonePost;
-        departmentName = departmentNamePost;
-        serviceName = serviceNamePost;
+        departmentCode = departmentCodePost;
+        serviceId = serviceIdPost;
 
         try {
             SimpleDateFormat format = new SimpleDateFormat();
@@ -77,7 +77,7 @@ public class DeclareController {
 
         paramsChecking = declareService.declare(
                 userLastName, userFirstName, userPatronymic,
-                userPhone, userEmail, userAge, departmentName, serviceName);
+                userPhone, userEmail, userAge, departmentCode, serviceId);
 
         if (paramsChecking.equals("")) {
             model.addAttribute("paramsChecking", "success");

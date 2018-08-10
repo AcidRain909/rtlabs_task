@@ -14,6 +14,10 @@ public class Declarer {
     public Declarer() {
     }
 
+    public Declarer(int id) {
+        this.id = id;
+    }
+
     public Declarer(int id, String lastName, String firstName, String patronymic, String phone, Date birthDate, String email) {
         this.id = id;
         this.lastName = lastName;

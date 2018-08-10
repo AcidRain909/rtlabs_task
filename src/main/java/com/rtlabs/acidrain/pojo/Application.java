@@ -1,4 +1,4 @@
-﻿package com.rtlabs.acidrain.pojo;
+package com.rtlabs.acidrain.pojo;
 
 import java.util.Date;
 

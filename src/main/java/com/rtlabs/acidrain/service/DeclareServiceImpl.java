@@ -1,6 +1,8 @@
 package com.rtlabs.acidrain.service;
+import com.rtlabs.acidrain.db.dao.ApplicationDao;
 import com.rtlabs.acidrain.db.dao.DeclarerDao;
 import com.rtlabs.acidrain.db.security.FormsCheck;
+import com.rtlabs.acidrain.pojo.Application;
 import com.rtlabs.acidrain.pojo.Declarer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,15 +19,17 @@ public class DeclareServiceImpl implements DeclareService {
     @Autowired
     private final FormsCheck formsCheck;
     private final DeclarerDao declarerDao;
+    private final ApplicationDao applicationDao;
 
-    public DeclareServiceImpl(FormsCheck formsCheck, DeclarerDao declarerDao) {
+    public DeclareServiceImpl(FormsCheck formsCheck, DeclarerDao declarerDao, ApplicationDao applicationDao) {
         this.formsCheck = formsCheck;
         this.declarerDao = declarerDao;
+        this.applicationDao = applicationDao;
     }
 
 
     @Override
-    public String declare(String userLastName, String userFirstName, String userPatronymic, String userPhone, String userEmail, Date userAge, String departmentName, String serviceName) {
+    public String declare(String userLastName, String userFirstName, String userPatronymic, String userPhone, String userEmail, Date userAge, String departmentCode, String serviceId) {
         String paramsChecking = "";
 
         if (!formsCheck.checkName(userLastName))
@@ -57,7 +61,15 @@ public class DeclareServiceImpl implements DeclareService {
             declarer.setEmail(userEmail);
             declarer.setBirthDate(userAge);
 
-            declarerDao.addDeclarer(declarer);
+            Integer declarerId = declarerDao.addDeclarer(declarer);
+
+            Application application = new Application();
+            application.setServiceId(Integer.parseInt(serviceId));
+            application.setDeclarerId(declarerId);
+            application.setCreated(new Date());
+
+            applicationDao.addApplication(application);
+
 
         }
         return paramsChecking;

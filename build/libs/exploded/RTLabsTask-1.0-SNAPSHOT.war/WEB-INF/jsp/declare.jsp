@@ -48,7 +48,7 @@
         <label>Выберите департамент обращения</label>
 
         <div>
-            <select id="departmentSelect">
+            <select id="departmentSelect" name="departmentCode">
                 <c:forEach var="departmentArrayList" items="${departmentArrayList}">
                     <option value="${departmentArrayList.code}">${departmentArrayList.name}</option>
                 </c:forEach>
@@ -57,7 +57,7 @@
 
         <label>Выберите услугу</label>
         <div>
-            <select id="serviceSelect">
+            <select id="serviceSelect" name="serviceId">
                 <c:forEach var="serviceArrayList" items="${serviceArrayList}">
                     <option value="${serviceArrayList.departmentCode}">${serviceArrayList.name}</option>
                 </c:forEach>

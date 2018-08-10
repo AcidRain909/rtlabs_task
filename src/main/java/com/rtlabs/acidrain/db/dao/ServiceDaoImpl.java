@@ -59,6 +59,7 @@ public class ServiceDaoImpl implements ServiceDao{
                 try (ResultSet resultSet = statement.executeQuery()) {
                     while (resultSet.next()) {
                         serviceArrayList.add(new Service(
+                                resultSet.getInt("id"),
                                 resultSet.getString("name"),
                                 resultSet.getInt("department_code")
                         ));

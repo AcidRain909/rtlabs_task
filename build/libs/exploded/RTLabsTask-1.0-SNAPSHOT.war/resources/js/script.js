@@ -14,7 +14,7 @@ $(document).ready(function () {
                 success: function (services) {
                     $('#serviceSelect').empty();
                     $.each(services, function(i, obj) {
-                        $('#serviceSelect').append($('<option>').text("" + obj.name).attr('value', obj.code));
+                        $('#serviceSelect').append($('<option>').text(obj.name).val(obj.id));
                     });
                 }
             });

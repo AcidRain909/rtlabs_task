@@ -27,7 +27,6 @@ public class DepartmentDaoImpl implements DepartmentDao {
                     "ORDER BY name")) {
 
                 try (ResultSet resultSet = statement.executeQuery()) {
-
                     while (resultSet.next()) {
                         departmentArrayList.add(new Department(
                                 resultSet.getString("name"),
