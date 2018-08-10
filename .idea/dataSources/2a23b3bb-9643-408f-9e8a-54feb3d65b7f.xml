@@ -66,8 +66,8 @@
     </role>
     <schema id="16" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-08-09.15:02:57.865</IntrospectionTimestamp>
-      <IntrospectionStateNumber>2086</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-08-09.23:23:10.832</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2092</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -124,7 +124,7 @@
     </table>
     <table id="27" parent="16" name="declarer">
       <ObjectId>58762</ObjectId>
-      <StateNumber>2086</StateNumber>
+      <StateNumber>2092</StateNumber>
     </table>
     <table id="28" parent="16" name="department">
       <ObjectId>58756</ObjectId>
@@ -220,20 +220,13 @@
       <StateNumber>2054</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="27" name="birth_date">
-      <Position>5</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>2055</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="43" parent="27" name="email">
+    <column id="42" parent="27" name="email">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>2056</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="27" name="id">
+    <column id="43" parent="27" name="id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -241,6 +234,13 @@
       <DefaultExpression>nextval(&apos;declarer_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>declarer_id_seq</SequenceName>
+    </column>
+    <column id="44" parent="27" name="birth_date">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2092</StateNumber>
+      <TypeId>1114</TypeId>
     </column>
     <index id="45" parent="27" name="declarer_email_uindex">
       <ObjectId>58808</ObjectId>
@@ -258,11 +258,11 @@
       <UnderlyingIndexName>declarer_id_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="48" parent="28" name="department">
+    <column id="48" parent="28" name="name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2071</StateNumber>
+      <StateNumber>2088</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="49" parent="28" name="id">
@@ -283,7 +283,7 @@
     </column>
     <index id="51" parent="28" name="department_department_name_uindex">
       <ObjectId>58799</ObjectId>
-      <ColNames>department</ColNames>
+      <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="52" parent="28" name="department_id_pk">

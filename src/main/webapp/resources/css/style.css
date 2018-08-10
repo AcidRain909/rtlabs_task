@@ -1,0 +1,134 @@
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: tahoma, sens-serif;
+    font-size: 14px;
+    background: transparent;
+    color: #777;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 940px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+header {
+    height: 5vh;
+    background: cornflowerblue;
+    color: whitesmoke;
+}
+
+footer {
+    height: 5vh;
+    background: cornflowerblue;
+    color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.container{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+form {
+    height: auto;
+}
+
+form label {
+    display: Block;
+    width: 85%;
+    margin: 10px auto 0;
+}
+
+.btn,
+input[type="submit"] {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    height: auto;
+    background: #2bad4d;
+    text-decoration: none;
+    text-align: Center;
+    text-transform: uppercase;
+    padding: 7px;
+    border: 1px solid #fff;
+    margin: 10px auto 0;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+    opacity: 0.74;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    display: block;
+    width: 85%;
+    padding: 7px;
+    margin: 0px auto 10px;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 1px solid #2bad4d;
+    border-left: 1px solid #2bad4d;
+}
+
+.styledsel {
+    padding: 7px;
+    overflow: hidden;
+    border-bottom: 1px solid #2bad4d;
+    border-left: 1px solid #2bad4d;
+    width: 85%;
+    margin: 0px auto 10px;
+}
+
+.styledsel select {
+    text-transform: none;
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    width: 100%;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 31px;
+    margin-top: 0;
+}
+
+textarea {
+    height: 120px;
+}
+
+.msg.error {
+    background: rgba(200, 56, 107, 0.5);
+}
+
+.msg.success {
+    background: rgba(43, 173, 77, 0.5);
+}
