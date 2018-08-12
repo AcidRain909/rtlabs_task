@@ -1,6 +1,7 @@
 package com.rtlabs.acidrain.controller;
 
 import com.google.gson.Gson;
+import com.rtlabs.acidrain.service.ApplicationViewService;
 import com.rtlabs.acidrain.service.DeclareService;
 import com.rtlabs.acidrain.service.DepartmentService;
 import com.rtlabs.acidrain.service.ServiceService;
@@ -33,11 +34,13 @@ public class DeclareController {
     private final DeclareService declareService;
     private final DepartmentService departmentService;
     private final ServiceService serviceService;
+    private final ApplicationViewService applicationViewService;
 
-    public DeclareController(DeclareService declareService, DepartmentService departmentService, ServiceService serviceService) {
+    public DeclareController(DeclareService declareService, DepartmentService departmentService, ServiceService serviceService, ApplicationViewService applicationViewService) {
         this.declareService = declareService;
         this.departmentService = departmentService;
         this.serviceService = serviceService;
+        this.applicationViewService = applicationViewService;
     }
 
 
@@ -71,18 +74,24 @@ public class DeclareController {
             SimpleDateFormat format = new SimpleDateFormat();
             format.applyPattern("yyyy-MM-dd");
             userAge = format.parse(userBirthDatePost);
+
+            paramsChecking = declareService.declare(
+                    userLastName, userFirstName, userPatronymic,
+                    userPhone, userEmail, userAge, departmentCode, serviceId);
+
         } catch (ParseException e) {
+            paramsChecking = "Вы не ввели Дату рождения.";
             System.out.println(e.getMessage());
         }
 
-        paramsChecking = declareService.declare(
-                userLastName, userFirstName, userPatronymic,
-                userPhone, userEmail, userAge, departmentCode, serviceId);
+
 
         if (paramsChecking.equals("")) {
             model.addAttribute("paramsChecking", "success");
+            getDepartmentsAndServicesInfo(model);
             return "declare";
         } else {
+            getDepartmentsAndServicesInfo(model);
             returnParamsToModel(model);
             return "declare";
         }
@@ -94,7 +103,6 @@ public class DeclareController {
         model.addAttribute("userPatronymic", userPatronymic);
         model.addAttribute("userPhone", userPhone);
         model.addAttribute("userEmail", userEmail);
-        model.addAttribute("userBirthDate", userAge);
         model.addAttribute("paramsChecking", paramsChecking);
     }
 
@@ -107,5 +115,11 @@ public class DeclareController {
     public @ResponseBody String getServicesListAjax(@RequestParam("departmentCode") String departmentCode) {
         String servicesJson = new Gson().toJson(serviceService.getServicesByCode(Integer.parseInt(departmentCode)));
         return servicesJson;
+    }
+
+    @RequestMapping(value = "/getApplicationsAjax/", method = RequestMethod.POST)
+    public @ResponseBody String getApplicationsAjax() {
+        String applicationsJson = new Gson().toJson(applicationViewService.getAllApplicationView());
+        return applicationsJson;
     }
 }

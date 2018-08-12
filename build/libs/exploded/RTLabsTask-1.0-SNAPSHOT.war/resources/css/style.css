@@ -67,7 +67,6 @@ input[type="submit"] {
     height: auto;
     background: #2bad4d;
     text-decoration: none;
-    text-align: Center;
     text-transform: uppercase;
     padding: 7px;
     border: 1px solid #fff;
@@ -131,4 +130,33 @@ textarea {
 
 .msg.success {
     background: rgba(43, 173, 77, 0.5);
+}
+
+#db_table {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#db_table tr td {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+#blackout{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    display: none;
+}
+
+#database{
+    z-index: 15;
+    background: white;
+    width: 90%;
+    text-align: center;
+    margin: 10vh auto;
 }

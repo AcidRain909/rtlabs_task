@@ -44,9 +44,6 @@ public class DeclareServiceImpl implements DeclareService {
         if (!formsCheck.checkPhone(userPhone))
             paramsChecking += "Телефон введен неверно.<br>";
 
-        if (!formsCheck.checkEmail(userEmail))
-            paramsChecking += "Email введен неверно.<br>";
-
         int age = Period.between(convertToLocalDate(userAge), convertToLocalDate(new Date())).getYears();
 
         if (age <= 18)
@@ -63,13 +60,14 @@ public class DeclareServiceImpl implements DeclareService {
 
             Integer declarerId = declarerDao.addDeclarer(declarer);
 
-            Application application = new Application();
-            application.setServiceId(Integer.parseInt(serviceId));
-            application.setDeclarerId(declarerId);
-            application.setCreated(new Date());
+            if(declarerId != 0) {
+                Application application = new Application();
+                application.setServiceId(Integer.parseInt(serviceId));
+                application.setDeclarerId(declarerId);
+                application.setCreated(new Date());
 
-            applicationDao.addApplication(application);
-
+                applicationDao.addApplication(application);
+            }
 
         }
         return paramsChecking;

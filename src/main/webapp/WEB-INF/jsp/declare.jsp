@@ -59,13 +59,36 @@
         <div>
             <select id="serviceSelect" name="serviceId">
                 <c:forEach var="serviceArrayList" items="${serviceArrayList}">
-                    <option value="${serviceArrayList.departmentCode}">${serviceArrayList.name}</option>
+                    <option value="${serviceArrayList.id}">${serviceArrayList.name}</option>
                 </c:forEach>
             </select>
         </div>
 
         <input type="submit" value="Отправить заявку">
     </form>
-</div>
 
+    <input id="database_button" type="submit" value="Посмотреть полученные заявки">
+</div>
+</div>
+</div>
+<div id="blackout">
+    <div id="database">
+        <table id="db_table">
+            <thead>
+            <tr>
+                <td>№ Заявки</td>
+                <td>Дата поступления</td>
+                <td>ФИО заявителя</td>
+                <td>Дата рождения</td>
+                <td>Контакты (телефон / email)</td>
+                <td>Наименование услуги</td>
+                <td>Наименование ведомства</td>
+            </tr>
+            </thead>
+            <tbody id="body_for_applications">
+
+            </tbody>
+        </table>
+    </div>
+</div>
 <%@ include file="footer.jsp" %>

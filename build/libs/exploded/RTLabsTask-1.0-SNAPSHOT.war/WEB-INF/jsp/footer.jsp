@@ -1,7 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-</div>
-
-</div>
 
 <footer>
     <div class="wrapper">
@@ -9,6 +6,7 @@
     </div>
 </footer>
 </div>
+
 
 </body>
 </html>

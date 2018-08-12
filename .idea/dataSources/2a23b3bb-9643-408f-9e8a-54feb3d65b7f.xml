@@ -66,8 +66,8 @@
     </role>
     <schema id="16" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-08-10.21:42:10.391</IntrospectionTimestamp>
-      <IntrospectionStateNumber>2119</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-08-11.16:38:26.140</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2150</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -120,11 +120,11 @@
     </sequence>
     <table id="26" parent="16" name="application">
       <ObjectId>58765</ObjectId>
-      <StateNumber>2086</StateNumber>
+      <StateNumber>2149</StateNumber>
     </table>
     <table id="27" parent="16" name="declarer">
       <ObjectId>58762</ObjectId>
-      <StateNumber>2092</StateNumber>
+      <StateNumber>2150</StateNumber>
     </table>
     <table id="28" parent="16" name="department">
       <ObjectId>58756</ObjectId>
@@ -150,10 +150,10 @@
     </column>
     <column id="32" parent="26" name="created">
       <Position>6</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2078</StateNumber>
-      <TypeId>1114</TypeId>
+      <StateNumber>2149</StateNumber>
+      <TypeId>1082</TypeId>
     </column>
     <column id="33" parent="26" name="id">
       <Position>7</Position>
@@ -237,40 +237,35 @@
     </column>
     <column id="44" parent="27" name="birth_date">
       <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2092</StateNumber>
-      <TypeId>1114</TypeId>
+      <StateNumber>2150</StateNumber>
+      <TypeId>1082</TypeId>
     </column>
     <index id="45" parent="27" name="declarer_phone_uindex">
       <ObjectId>58850</ObjectId>
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="46" parent="27" name="declarer_email_uindex">
-      <ObjectId>58808</ObjectId>
-      <ColNames>email</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="47" parent="27" name="declarer_id_pk">
+    <index id="46" parent="27" name="declarer_id_pk">
       <ObjectId>58819</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="48" parent="27" name="declarer_id_pk">
+    <key id="47" parent="27" name="declarer_id_pk">
       <ObjectId>58820</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>declarer_id_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="49" parent="28" name="name">
+    <column id="48" parent="28" name="name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2088</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="50" parent="28" name="id">
+    <column id="49" parent="28" name="id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -279,49 +274,49 @@
       <TypeId>23</TypeId>
       <SequenceName>department_id_seq</SequenceName>
     </column>
-    <column id="51" parent="28" name="code">
+    <column id="50" parent="28" name="code">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2049</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="52" parent="28" name="department_department_name_uindex">
+    <index id="51" parent="28" name="department_department_name_uindex">
       <ObjectId>58799</ObjectId>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="53" parent="28" name="department_id_pk">
+    <index id="52" parent="28" name="department_id_pk">
       <ObjectId>58780</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="54" parent="28" name="department_department_code_uindex">
+    <index id="53" parent="28" name="department_department_code_uindex">
       <ObjectId>58782</ObjectId>
       <ColNames>code</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="28" name="department_id_pk">
+    <key id="54" parent="28" name="department_id_pk">
       <ObjectId>58781</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>department_id_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="56" parent="29" name="department_code">
+    <column id="55" parent="29" name="department_code">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2043</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="57" parent="29" name="name">
+    <column id="56" parent="29" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2070</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="29" name="id">
+    <column id="57" parent="29" name="id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -330,23 +325,23 @@
       <TypeId>23</TypeId>
       <SequenceName>service_id_seq</SequenceName>
     </column>
-    <index id="59" parent="29" name="service_service_name_uindex">
+    <index id="58" parent="29" name="service_service_name_uindex">
       <ObjectId>58786</ObjectId>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="60" parent="29" name="service_id_pk">
+    <index id="59" parent="29" name="service_id_pk">
       <ObjectId>58797</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="61" parent="29" name="service_id_pk">
+    <key id="60" parent="29" name="service_id_pk">
       <ObjectId>58798</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>service_id_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="62" parent="29" name="service_department_code_fk">
+    <foreign-key id="61" parent="29" name="service_department_code_fk">
       <ObjectId>58800</ObjectId>
       <ColNames>department_code</ColNames>
       <RefTableId>58756</RefTableId>
