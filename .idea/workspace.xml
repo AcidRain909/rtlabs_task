@@ -7,21 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1820a469-06df-4323-a86d-7075b5fe6754" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/rtlabs_db_dump.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a23b3bb-9643-408f-9e8a-54feb3d65b7f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a23b3bb-9643-408f-9e8a-54feb3d65b7f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/RTLabsTask-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/RTLabsTask-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/WEB-INF/classes/com/rtlabs/acidrain/db/connectionManager/ConnectionManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/WEB-INF/classes/com/rtlabs/acidrain/db/connectionManager/ConnectionManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/WEB-INF/classes/com/rtlabs/acidrain/service/DeclareServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/WEB-INF/classes/com/rtlabs/acidrain/service/DeclareServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/RTLabsTask-1.0-SNAPSHOT.war/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/rtlabs/acidrain/db/connectionManager/ConnectionManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/rtlabs/acidrain/db/connectionManager/ConnectionManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/rtlabs/acidrain/service/DeclareServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/rtlabs/acidrain/service/DeclareServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rtlabs/acidrain/db/connectionManager/ConnectionManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rtlabs/acidrain/db/connectionManager/ConnectionManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rtlabs/acidrain/service/DeclareServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rtlabs/acidrain/service/DeclareServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dump.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rtlabs_db_dump.sql" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -147,11 +135,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rtlabs_db_dump.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rtlabs_db_dump.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="286">
+                <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -161,18 +152,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="214" selection-start-column="214" selection-end-column="214" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rtlabs/acidrain/db/dao/ServiceDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -636,6 +615,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -880,12 +860,12 @@
       <workItem from="1533767017583" duration="44052000" />
       <workItem from="1533910205554" duration="262000" />
       <workItem from="1533910477013" duration="6718000" />
-      <workItem from="1533923603167" duration="27946000" />
+      <workItem from="1533923603167" duration="29269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78978000" />
+    <option name="totallyTimeSpent" value="80301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -898,7 +878,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.21002132" />
+      <window_info anchor="right" id="Database" order="3" weight="0.21002132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -914,7 +894,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.17025863" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.32995737" />
@@ -978,13 +958,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rtlabs/acidrain/db/security/FormsCheckImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
@@ -1423,6 +1396,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="286">
+            <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
