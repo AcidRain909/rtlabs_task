@@ -33,13 +33,13 @@ public class DeclareServiceImpl implements DeclareService {
         String paramsChecking = "";
 
         if (!formsCheck.checkName(userLastName))
-            paramsChecking += "Ошибка в фамилии. Необходимо использовать только кириллицу.<br>";
+            paramsChecking += "Ошибка в фамилии.<br>";
 
         if (!formsCheck.checkName(userFirstName))
-            paramsChecking += "Ошибка в имени. Необходимо использовать только кириллицу.<br>";
+            paramsChecking += "Ошибка в имени.<br>";
 
         if (!formsCheck.checkName(userPatronymic))
-            paramsChecking += "Ошибка в отчестве. Необходимо использовать только кириллицу.<br>";
+            paramsChecking += "Ошибка в отчестве.<br>";
 
         if (!formsCheck.checkPhone(userPhone))
             paramsChecking += "Телефон введен неверно.<br>";
@@ -47,7 +47,7 @@ public class DeclareServiceImpl implements DeclareService {
         int age = Period.between(convertToLocalDate(userAge), convertToLocalDate(new Date())).getYears();
 
         if (age <= 18)
-            paramsChecking += "Вам должно быть больше 18 лет!";
+            paramsChecking += "Вам должно быть больше 18 лет!<br>";
 
         if (paramsChecking.equals("")) {
             Declarer declarer = new Declarer();

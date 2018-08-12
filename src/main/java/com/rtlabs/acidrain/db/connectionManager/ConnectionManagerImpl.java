@@ -25,7 +25,7 @@ public class ConnectionManagerImpl implements ConnectionManager {
         try{
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/rtlabs_db",
+                    "jdbc:postgresql://localhost:5432/rtlabs_db?useUnicode=true&characterEncoding=utf-8",
                     "postgres",
                     "nothing");
         } catch (ClassNotFoundException | SQLException e) {
